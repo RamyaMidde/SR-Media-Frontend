@@ -496,21 +496,8 @@
         <div class="text-center">
             <button type="submit" class="btn btn-primary" tabIndex="-1">Send</button>
         </div>
-    </form>
-
-
-    <ng-template #resetPasswordMail let-modal>
-        <div class="modal-content">
-            <div class="ps-3 pe-3">
-                <img class="mt-3 mb-3 check-circle-icon" src="assets/images/authentication/check-circle.svg" />
-                <p class="successMessage">Password Reset Link Sent</p>
-                <p class="checkMailText">Check Your Email to Reset Your Password</p>
-                <p class="successText">
-                    Please check your inbox and follow the link to reset your password
-                </p>
-            </div>
+        <div *ngIf="showMessage" class="text-success mt-3 ms-4">
+            Thanks for contacting us We will get back to you soon.
         </div>
-    </ng-template>
-
-
+    </form>
 </div>

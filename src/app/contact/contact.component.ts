@@ -3,8 +3,6 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -18,11 +16,12 @@ class ContactService {
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  
+  showMessage = false;
   @ViewChild('resetPasswordMail') resetPasswordMail: any;
   constructor(
     private formBuilder: FormBuilder,
-    private http: HttpClient,
-    private modalService: NgbModal
+    private http: HttpClient
   ) { }
 
   // Contact Us Form
@@ -55,9 +54,11 @@ export class ContactComponent {
             console.error(err);
           }
         );
-        this.forgotPasswordModal();
-        //  this.toastr.success('Email has been sent successfully!', 'Success');
+        this.showMessage = true;
         this.contactUsForm.reset();
+        setTimeout(() => {
+          this.showMessage = false;
+        }, 3000);
         
     }
   }
@@ -68,15 +69,4 @@ export class ContactComponent {
     console.log('ramyaaaa')
     return this.http.post(apiUrl, data);
   }
-
-    //  Open Forgot Password modal 
-    forgotPasswordModal() {
-      this.modalService.open(this.resetPasswordMail, {
-        backdrop: true,
-        keyboard: false,
-        centered: true,
-        windowClass: 'modal-holder'
-      });
-    }
-
 }

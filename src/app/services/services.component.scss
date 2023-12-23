@@ -1,0 +1,128 @@
+//Background Image
+.signIn-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 90, 118, 0.5);
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    h1 {
+        font-size: 4rem;
+        font-style: italic;
+    }
+}
+
+.header {
+    color: #6495ED;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.top{
+  margin-top: 7rem;
+}
+
+//newww
+
+// Colors
+$color-primary-white: rgb(240, 240, 240);
+
+// main {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 50px;
+//   font-family: 'Roboto', sans-serif;
+// }
+
+.card {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: $color-primary-white;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+ 
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
+
+ 
+  // p, a {
+  //   position: absolute;
+  //   opacity: 0;
+  //   max-width: 80%;
+  //   transition: opacity .3s ease-out;
+  // }
+  
+  // p {
+  //   inset: auto auto 80px 30px;
+  // }
+  
+  // a {
+  //   inset: auto auto 40px 30px;
+  //   color: inherit;
+  //   text-decoration: none;
+  // }
+  
+  // &:hover h2 {
+  //   inset: auto auto 120px 30px;
+  //   transition: inset .3s ease-out;
+  // }
+  
+  // &:hover p, &:hover a {
+  //   opacity: 1;
+  //   transition: opacity .5s .1s ease-in;
+  // }
+  
+  // &:hover img {
+  //   transition: opacity .3s ease-in;
+  //   opacity: 1;
+  // }
+
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+
+
+
+
+

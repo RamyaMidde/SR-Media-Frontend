@@ -1,0 +1,297 @@
+/* Common styles for all screens */
+.signIn-background {
+    position: relative;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 90, 118, 0.5);
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Responsive styles using media queries */
+@media (max-width: 767px) {
+    /* Styles for screens up to 767px wide (typical mobile devices) */
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50vh;
+        text-align: justify;
+        // transform: translate(-50%, -50%);
+        // color: white;
+    }
+
+    .signIn-background {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        margin-top: -30px;
+    }
+}
+
+/* Add more media queries for other screen sizes if needed */
+
+/* Other styles remain unchanged */
+
+//Flip card
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 75%;
+    height: 95%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(6, 5, 5, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    // background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.profileCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+
+//Why Us
+
+.panel {
+    height: 270px;
+    width: 190px;
+    position: relative;
+
+    &:hover {
+        .card {
+            filter: blur(1.5px);
+        }
+
+        .card1 {
+            background-size: 215% 135%;
+        }
+
+        .card2 {
+            background-size: 115% 115%;
+        }
+
+        .card3 {
+            background-size: 155% 115%;
+        }
+
+        .title {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .border {
+            border: 1px solid rgba(255, 255, 255, 1);
+        }
+
+        .slide {
+            bottom: 0px;
+        }
+
+        .ring:before,
+        .ring:after {
+            transform: translateX(-50%) translateY(-50%) rotate(310deg);
+        }
+    }
+}
+
+.ring,
+.card,
+.border,
+.slide,
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring {
+    color: #fffbf1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 170px;
+}
+
+.card {
+    background: #f0ead6;
+    position: relative;
+    transition: all 1s;
+    height: 270px;
+    width: 190px;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.card1 {
+    background-image: url("https://assets.codepen.io/489403/brazil.jpg");
+    background-repeat: no-repeat;
+    background-size: 200% 120%;
+}
+
+.card2 {
+    background-image: url("https://cdn.cbeditz.com/cbeditz/preview/sky-cloud-cb-editing-background-full-hd-download-11643564896mkyckdpxsf.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card3 {
+    background-image: url("https://assets.codepen.io/489403/egypt.jpg");
+    background-repeat: no-repeat;
+    background-size: 140% 100%;
+}
+
+.card4 {
+    background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg");
+    background-repeat: no-repeat;
+    background-size: 140% 100%;
+}
+
+.ring:before,
+.ring:after {
+    content: "";
+    padding: 0.7em 0.4em;
+    position: absolute;
+    left: 50%;
+    width: 115%;
+    top: 50%;
+    display: block;
+    border: 5px solid #50c9c3;
+    border-radius: 50%;
+    transition: transform 1s;
+    transform: translateX(-50%) translateY(-50%) rotate(50deg);
+}
+
+.ring:before {
+    border-color: rgb(235, 235, 235) rgb(235, 235, 235) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.ring:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(235, 235, 235) rgb(235, 235, 235);
+}
+
+//   p {
+//     text-align: center;
+//     position: absolute;
+//     font-family: "Playfair Display";
+//   }
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+    transition: all 1s;
+    top: 0;
+}
+
+.para {
+    bottom: 0;
+    font-size: 16px;
+    font-family: "Raleway";
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.border {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 260px;
+    width: 180px;
+    transition: border 1s;
+    overflow: hidden;
+}
+
+.slide {
+    height: 260px;
+    width: 180px;
+    position: absolute;
+    border: 1px solid black;
+    bottom: -270px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: bottom 1s;
+    flex-direction: column;
+}
+
+.fa-plane {
+    font-size: 16px;
+}
+
+.bottom {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+//header
+
+.header {
+    color: #6495ED;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.subhead {
+    color: #041027;
+    font-size: 25px;
+    font-weight: bold;
+}

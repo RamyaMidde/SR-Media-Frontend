@@ -16,7 +16,7 @@ class ContactService {
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  
+
   showMessage = false;
   @ViewChild('resetPasswordMail') resetPasswordMail: any;
   constructor(
@@ -27,7 +27,7 @@ export class ContactComponent {
   // Contact Us Form
   contactUsForm = this.formBuilder.group({
     name: ['', [Validators.required]],
-    email: ['', [Validators.required,Validators.email]],
+    email: ['', [Validators.required, Validators.email]],
     message: ['', Validators.required],
   });
 
@@ -54,12 +54,12 @@ export class ContactComponent {
             console.error(err);
           }
         );
-        this.showMessage = true;
-        this.contactUsForm.reset();
-        setTimeout(() => {
-          this.showMessage = false;
-        }, 3000);
-        
+      this.showMessage = true;
+      this.contactUsForm.reset();
+      setTimeout(() => {
+        this.showMessage = false;
+      }, 3000);
+
     }
   }
 
